@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>青年大学习登录界面</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/Login.css"/>
+
+</head>
+<body>
+    <div id="login">
+        <h1>赣南师范大学青年大学习后台系统</h1>
+        <form action="index/" method="post">
+            {% csrf_token %}
+            <label>
+                <select name="college">
+                    <option value = "文学院">文学院</option>
+                    <option value = "新闻与传播学院">新闻与传播学院</option>
+                    <option value = "马克思主义学院">马克思主义学院</option>
+                    <option value = "历史文化与旅游学院">历史文化与旅游学院</option>
+                    <option value = "外国语学院">外国语学院</option>
+                    <option value = "外国语学院">教育科学学院</option>
+                    <option value = "教育科学学院">数学与计算机科学学院</option>
+                    <option value = "物理与电子信息学院">物理与电子信息学院</option>
+                    <option value = "化学化工学院">化学化工学院</option>
+                    <option value = "生命科学学院">生命科学学院</option>
+                    <option value = "地理与环境工程学院">地理与环境工程学院</option>
+                    <option value = "经济管理学院">经济管理学院</option>
+                    <option value = "音乐学院">音乐学院</option>
+                    <option value = "美术学院">美术学院</option>
+                    <option value = "体育学院">体育学院</option>
+                </select>
+            </label>
+            <label>
+                <input type="text" required="required" placeholder="账号" name="user_name">
+            </label>
+            <label>
+                <input type="text" required="required" placeholder="密码" name="password">
+            </label>
+            <button class="but" type="submit">登录</button>
+        </form>
+    </div>
+</body>
+</html>

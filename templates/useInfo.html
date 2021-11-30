@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赣南师范大学青年大学习后台系统</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/Login.css"/>
+
+</head>
+<body>
+    <div id="login">
+        <h1>赣南师范大学青年大学习后台系统</h1>
+        <span id="paths"></span>
+        <form action="/details/" method="post">
+            {% csrf_token %}
+            <label>
+                <select name="period">
+                    <option value = "第十五期">第十二季第十五期</option>
+                    <option value = "第十四期">第十二季第十四期</option>
+                    <option value = "第十三期">第十二季第十三期</option>
+                    <option value = "第十二期">第十二季第十二期</option>
+                    <option value = "第十一期">第十二季第十一期</option>
+                    <option value = "第十期">第十二季第十期</option>
+                    <option value = "第九期">第十二季第九期</option>
+                    <option value = "“青年大学习”特辑">“青年大学习”特辑</option>
+                    <option value = "第八期">第十二季第八期</option>
+                    <option value = "第七期">第十二季第七期</option>
+                    <option value = "第六期">第十二季第六期</option>
+                    <option value = "第五期">第十二季第五期</option>
+                    <option value = "第四期">第十二季第四期</option>
+                    <option value = "第三期">第十二季第三期</option>
+                    <option value = "第二期">第十二季第二期</option>
+                    <option value = "第一期">第十二季第一期</option>
+                </select>
+            </label>
+         <label>
+                <input type="text" required="required" placeholder="请输入文件地址" name="file_path">
+         </label>
+        <button class="but" type="submit" placeholder="下载到本地" name="localsave">下载到本地</button>
+        </form>
+    </div>
+</body>
+</html>
